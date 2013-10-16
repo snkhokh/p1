@@ -1,0 +1,40 @@
+<SCRIPT language="JavaScript" src="../js/calendar.js"></script>
+<table width="100%" cellpadding="2" cellspacing="1" border="0">
+<form action="{ACTION}" method="post">
+
+<tr>
+  <th colspan="2">Период</th>
+</tr>
+<tr>
+  <td class="row1" nowrap align="right" width="30%">
+    <span class="gen"><a href="javascript:popUpCalendar(document.all.datebeg, document.all.datebeg, 'dd.mm.yyyy')">Начало периода:</a></span>
+  </td>
+  <td class="row2">
+<table>
+        <tr><td>        <input type="text" name="datebeg" size="10" maxlength="10" value="{DATEBEG}"></td>
+            <td>        <input type="text" name="timebeg" size="5" maxlength="5" value="{TIMEBEG}"></td>
+        </tr>
+</table>
+  </td>
+</tr>
+<tr>
+  <td class="row1" nowrap align="right">
+        <span class="gen"><a href="javascript:popUpCalendar(document.all.dateend, document.all.dateend, 'dd.mm.yyyy')">Окончание периода:</a></span>
+  </td>
+  <td class="row2">
+
+<table>
+        <tr><td>        <input type="text" name="dateend" size="10" maxlength="10" value="{DATEEND}"></td>
+            <td>        <input type="text" name="timeend" size="5" maxlength="5" value="{TIMEEND}"></td>
+        </tr>
+</table>
+
+  </td>
+</tr>
+<tr>
+
+  <td class="row1" colspan="2" align="center"><input type="submit" value="Сформировать отчет"></td>
+</tr>
+</table>
+</form>
+{OTHERITEMS}

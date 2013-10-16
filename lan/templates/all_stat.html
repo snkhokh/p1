@@ -1,0 +1,24 @@
+<table border="2" width="100%">
+ <thead>
+    <tr>
+      <th rowspan=2 width="18%">Идентификатор<br>абонента</TH>
+      <th width="24%" colspan=2 align="center">Счетчики трафика</TH>
+          <th rowspan=2 width="60%">Относительная активность</th>
+    </tr>
+      <tr><th width="12%" align="center">Входящего</TH>
+      <th width="12%" align="center">Исходящего</TH>
+</tr>
+  </thead>
+  <tbody>
+
+        <!-- BEGIN DYNAMIC BLOCK: row -->
+    <tr>
+        <td><a href="stat.php?mode=user&pid={PID}">{PNAME}</a></td>
+        <td align=right BGCOLOR=#ffff80>{IN}</td>
+        <td align=right BGCOLOR=#80ff00>{OUT}</td>
+        <td><font face="arial" size="1"><img src="../img/bar-y.gif" width="{REL_IN}%" height="10" border="0"> {REL_IN}%<br>
+        <img src="../img/bar-g.gif" width="{REL_OUT}%" height="10" border="0"> {REL_OUT}%</font></td>
+        <!-- END DYNAMIC BLOCK: row -->
+
+  </tbody>
+</table>

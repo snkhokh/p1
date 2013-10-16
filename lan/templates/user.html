@@ -1,0 +1,63 @@
+<table align=center>
+<tr>
+<td BGCOLOR=#CCFFFF>
+<table>
+<tr><td>Контактное лицо:</td><td>{FIO}</td></tr>
+<tr><td>Адрес электронной почты:</td><td><a href="mailto:{EMAIL}">{EMAIL}</a></td></tr>
+<tr><td>Дополнительная информация </td><td>{OPT}</td></tr>
+<tr><td>Количество абонентских пунктов: </td><td>{HOSTCOUNT}</td></tr>
+</table>
+</td>
+<td BGCOLOR=#FFCCFF>
+
+<table>
+<tr><td>остаток средств на счете</td><td>{BILL}</td>
+</tr>
+<tr><td>Остаток предоплаченных едениц:</td><td>{UNITS}</td></tr>
+</table>
+
+</td>
+</tr>
+<tr><td colspan=2 BGCOLOR=#FFFF99>
+
+
+<table>
+
+<tr>
+<td colspan=2 align=center>
+Тарифный план: <font face="lucida sans unicode" color="#ff6633">{TAXRATE}</font>
+</td>
+</tr>
+<tr><td>{MODE}</td></tr>
+<tr>
+       <td>Абонентская плата в месяц</td>
+       <td>{ABCHAR}</td>
+</tr>
+<tr>
+       <td>в сутки</td>
+       <td>-</td>
+</tr>
+<TR><TD>Учитываемый трафик (относительно клиента):</TD><TD>{INOUT}</TD></TR>
+<tr><td>За входящий трафик оплата на текущий момент составляет</td><td>{CHARIN}</td></tr>
+<tr><td>За исходящий трафик оплата на текущий момент составляет</td><td>{CHAROUT}</td></tr>
+</table>
+</td></tr>
+<tr><td colspan=2>
+
+<table border=1>
+
+<tr>
+       <td colspan=5>Баланс счета за текущий месяц:</td>
+</tr>
+<tr>
+       <td colspan=3>Поступило за период: {SUM_ADD}</td>
+       <td colspan=2>Расход за период: {SUM_SUB}</td>
+</tr>
+<tr>
+       <td>Нал.: {ADD_NAL}</td>
+       <td>Безнал.: {ADD_BANK}</td>
+       <td>Кредит: {ADD_CREDIT}</td>
+       <td>Абон. плата: {SUB_FEE}</td>
+       <td>Оплата траф.: {SUB_TRAF}</td>
+</tr>
+</table>

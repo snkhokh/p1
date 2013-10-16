@@ -1,0 +1,21 @@
+<table>
+<tr>
+<td colspan=3 align=center>Активность АП <em>{HNAME}</em> (ip:{IP})<br>
+абонента <em>{PNAME}</em> за сутки {DATE}</td>
+</tr>
+<tr>
+<td>
+<div>
+<a href="stat.php?dat={PDAT}">
+<span>&larr;</span>&nbsp;На сутки раньше</a></td>
+<td><img src="stat.php?dat={DAT}&pic=1" width="600" height="135" border="1"></td>
+<td><div>
+<a href="stat.php?dat={NDAT}">
+На сутки позже&nbsp;<span>&rarr;</span></a></td>
+</tr>
+<tr><td colspan=3 align=center>
+<I>ВСЕГО за заданный период:</I><BR>
+<font color="#f0f000">Входящего трафика: </font>{IN}<BR>
+<font color="#00cc00">Исходящего трафика:</font> {OUT}
+</tr>
+</table>

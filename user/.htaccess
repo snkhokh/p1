@@ -1,0 +1,6 @@
+Allow from all
+Satisfy any
+Options -ExecCGI -Indexes
+DirectoryIndex  user.php
+  
+  

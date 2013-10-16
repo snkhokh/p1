@@ -1,0 +1,35 @@
+<form action="users.php" method=post>
+    <table border="0" cellpadding="2" cellspacing="1">
+        <tr><td colspan="5"><b>Основная информация абонентского пункта</b></td></tr>
+        <tr><td colspan="2" bgcolor="#D5D5D5"><label for="hname"><tt>Наименование АП (логин):</tt></label></td>
+            <td colspan="2" bgcolor="#D5D5D5"><input name="hname" type="text" id="hname" title="идентификатор, используемый при авторизации" value="{HNAME}"></td>
+        <tr><td colspan="2" bgcolor="#D5D5D5"><label for="intip"><tt>IP адрес:</tt></label></td>
+            <td colspan="2" bgcolor="#D5D5D5"><input name="intip" type="text" id="intip" title="ip адрес на интерфейсе абонентского устройства" value="{INTIP}"></td>
+        <tr><td colspan="2" bgcolor="#D5D5D5"><label for="mask"><tt>Маска сети:</tt></label></td>
+            <td colspan="2" bgcolor="#D5D5D5"><input name="mask" type="text" value="{MASK}" id="mask" title="маска сети на интерфейсе абонентского устройства"></td>
+        <tr><td colspan="2" bgcolor="#D5D5D5"><label for="mac"><tt>MAC адрес:</tt></label></td>
+            <td colspan="2" bgcolor="#D5D5D5"><input name="mac" type="text" value="{MAC}" id="mac" title="физический адрес сетевой карты, исползуемый для авторизации"></td>
+        <tr><td colspan="5"><b>Параметры трансляции сетевых адресов</b></td></tr>
+        <tr><td bgcolor="#D5D5D5"><input type="checkbox" name="f_nat" {CHNAT} id="checkbox_nat" value="Y" title="Использовать преобразование адресов."></td>
+            <td bgcolor="#D5D5D5"><label for="checkbox_nat"><tt><dfn title="Использовать преобразование адресов.">использовать NAT</dfn></tt></label></td>
+            <td bgcolor="#D5D5D5"><input type="checkbox" name="f_ext" {CHEXT} id="checkbox_ext" value="Y" title="Транслировать во внешний адрес"></td>
+            <td bgcolor="#D5D5D5"><label for="checkbox_ext"><tt><dfn title="Транслировать во внешний адрес">использовать внешний адрес</dfn></tt></label></td>
+        <tr><td bgcolor="#D5D5D5" colspan="2"><label for="extip"><tt><dfn>внешний IP адрес:</dfn></tt></label></td>
+            <td bgcolor="#D5D5D5" colspan="2"><input name="extip" type="text" id="extip" title="адрес, в который транслируется во внешней сети, IP адрес абонента"  value="{EXTIP}"></td>
+        <tr><td bgcolor="#D5D5D5"><input type="checkbox" name="f_redir" {CHRD} id="checkbox_redir" value="Y" title="Перенаправлять запросы HTTP через прокси"></td>
+            <td bgcolor="#D5D5D5" colspan="3"><label for="checkbox_redir"><tt><dfn title="Перенаправлять запросы HTTP через прокси">Использовать перенаправление</dfn></tt></label></td>
+        <tr><td colspan="5"><b>Дополнительные параметры и флаги</b></td></tr>
+        <tr><td colspan="2" bgcolor="#D5D5D5"><label for="pass"><tt>Пароль:</tt></label></td>
+            <td colspan="2" bgcolor="#D5D5D5"><input name="pass" type="text" id="pass" title="пароль, используемый при авторизации" value="{PASS}"></td>
+        <tr><td bgcolor="#D5D5D5"><input type="checkbox" name="f_udown" {CHUDOWN} id="checkbox_udown" value="Y" title="Заблокировать, абонент может снять блокировку"></td>
+            <td bgcolor="#D5D5D5"><label for="checkbox_udown"><tt><dfn style="color :#008000;" title="Заблокировать, абонент может снять блокировку">Абонентская блокировка</dfn></tt></label></td>
+            <td bgcolor="#D5D5D5"><input type="checkbox" name="f_inact" {CHINACT} id="checkbox_inact" value="Y" title="Блокировать по истечении периода неактивности"></td>
+            <td bgcolor="#D5D5D5"><label for="checkbox_inact"><tt><dfn title="Блокировать по истечении периода неактивности">Отслеживать неактивность</dfn></tt></label></td>
+        <tr><td bgcolor="#D5D5D5"><input type="checkbox" name="f_down" {CHDOWN} id="checkbox_down" value="Y" title="Установить административную блокировку"></td>
+            <td bgcolor="#D5D5D5"><label for="checkbox_down"><tt><dfn title="Установить административную блокировку"><font color="#ff0000">Административная блокировка</font></dfn></tt></label></td>
+            <td bgcolor="#D5D5D5"><input type="checkbox" name="f_filter" {CHFILTER} id="checkbox_filter" value="Y" title="Запрещать соединения с сервисами по списку"></td>
+            <td bgcolor="#D5D5D5"><label for="checkbox_filter"><tt><dfn title="Запрещать соединения с сервисами по списку">Включить фильтрацию</dfn></tt></label></td>
+    </table>
+
+    <input type="submit" value="Внести изменения">
+</form>

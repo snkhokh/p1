@@ -1,0 +1,22 @@
+<table border="1" width="100%">
+  <colgroup span="2">
+  <colgroup span="3" align="right">
+  <thead>
+    <tr>
+      <th width="25%">Идентификатор</TH>
+      <th width="40%">Контактное лицо</TH>
+          <th width="20%" align="center"><small>Остаток денег на счете</small></th>
+          <th width="15%" align="center"><small>Остаток предоплаченных единиц</small></th>
+    </tr>
+  </thead>
+  <tbody>
+          <!-- BEGIN DYNAMIC BLOCK: row -->
+    <tr>
+    <td><a href="users.php?mode=user&pid={PID}" title="{TITLE}">{PNAME}</a></td>
+    <td>{FIO}</td>
+    <td align="right">{BILL}</td>
+    <td align="right">{UNITS}</td>
+    </tr>
+        <!-- END DYNAMIC BLOCK: row -->
+  </tbody>
+</table>

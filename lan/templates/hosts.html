@@ -1,0 +1,25 @@
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th width="19%">Идентификатор</TH>
+      <th width="18%"><small>Сетевой адрес внутри сети</small></TH>
+          <th width="18%"><small>Внешний сетевой адрес</small></th>
+          <th width="20%"><small>Адрес MAC сетевого контроллера</small></th>
+          <th width="10%" align="center">Флаги</th>
+          <th width="15%" align="center">Статистика</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- BEGIN DYNAMIC BLOCK: row -->
+    <tr><td>{HNAME}</a></td>
+    <td><a href=users.php?mode=edhost&pid={PID}&host={HID} title="Редактировать данные АП '{HNAME}'">
+    {INT_IP}</a></td>
+    <td>{EXT_IP}</td>
+    <td>{MAC}</td>
+    <td>{FLAGS}</td>
+    <td><a href=stat.php?mode=host&pid={PID}&host={HID}>Месяц</a>
+    <a href=stat.php?mode=grhost&pid={PID}&host={HID}>Граф.</a>
+    </td>
+    <!-- END DYNAMIC BLOCK: row -->
+  </tbody>
+</table>

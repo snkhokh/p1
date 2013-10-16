@@ -1,0 +1,53 @@
+<table border="0">
+<FORM METHOD=POST ACTION="tax_r.php">
+<INPUT TYPE="HIDDEN" NAME="mode" VALUE="edit">
+<INPUT TYPE="HIDDEN" NAME="tarif" VALUE="{TID}">
+
+<tr><td colspan="1">Наименование тарифа:</td><td colspan="2"><INPUT TYPE="TEXT" NAME="Name" VALUE="{NAME}"></td></tr>
+<tr><td colspan="1">Абонентская плата (за месяц):</td><td colspan="2"><INPUT TYPE="TEXT" NAME="AbonCharge" SIZE=7 VALUE="{ABCH}"></td></tr>
+<tr><td colspan="1">Единица учитываемого трафика:</td><td colspan="2"><INPUT TYPE="TEXT" NAME="TrafUnit" SIZE=9 VALUE="{TUNIT}"></td></tr>
+<tr>
+  <td>Тип учета трафика:</td>
+  <td colspan="2">
+    <table border="0">
+    <tr>
+      <td><input type=radio name="flag" value="norm" {SEL_NORM}></td>
+      <td>Денежный</td>
+      <td><input type=radio name="flag" value="day_limit" {SEL_DAY_LIMIT}></td>
+      <td>Лимит на день</td>
+    </tr>
+    <tr>
+      <td><input type=radio name="flag" value="mon_limit" {SEL_MON_LIMIT}></td>
+      <td>Лимит на месяц</td>
+      <td><input type=radio name="flag" value="just_count" {SEL_JUST_COUNT}></td>
+      <td>Только учет</td>
+    </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">Предоплаченные или лимитные единицы трафика:</td>
+  <td><INPUT TYPE="TEXT" NAME="PrePayedUnits" SIZE=9 VALUE="{PREP}"></td>
+</tr>
+<tr>
+  <td>Учитываемый трафик:</td>
+  <td colspan="1" align="right">Входящий <INPUT TYPE="CHECKBOX" NAME="CHECK_IN" VALUE="Y" {CHECK_IN}></td>
+  <td>Исходящий <INPUT TYPE="CHECKBOX" NAME="CHECK_OUT" VALUE="Y" {CHECK_OUT}></td>
+</tr>
+<tr><td colspan="3">
+  <TABLE BORDER=1>
+  <TR><TH COLSPAN=2>Интервалы времени суток<TH COLSPAN=2>Стоимость единицы<br>трафика</TR>
+  <TR><TH>Начало<TH>Окончание<TH>Входящего<TH>Исходящего</TR>
+   <!-- BEGIN DYNAMIC BLOCK: row -->
+  <TR>
+  <TD><INPUT TYPE="TEXT" NAME="period[]" VALUE="{FROM}"></TD>
+  <TD><INPUT TYPE="TEXT" NAME="period[]" VALUE="{TO}"></TD>
+  <TD><INPUT TYPE="TEXT" NAME="period[]" VALUE="{PRICE_IN}"></TD>
+  <TD><INPUT TYPE="TEXT" NAME="period[]" VALUE="{PRICE_OUT}"></TD>
+  </TR>
+   <!-- END DYNAMIC BLOCK: row -->
+  </TABLE>
+</td></tr>
+<tr><td colspan="3" align="center"><INPUT TYPE="SUBMIT" VALUE="Подтвердить изменения"></td></tr>
+</FORM>
+</table>
