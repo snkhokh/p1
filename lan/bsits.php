@@ -3,6 +3,15 @@ include("../lib/config.php");
 include("../lib/adm-lib.php");
 include("../lib/class.FastTemplate.php3");
 Connect();
+function doPageIdx() {
+    
+}
+$itemsPerPage = 20;
+$result = db_query ("SELECT COUNT(*) FROM blocksites WHERE 1");
+$row = db_row ($result['result']);
+$sitesCount == $row[0];
+if ($sitesCount > $itemsPerPage) doPageIdx();
+    
 if(@$_REQUEST['site']!="") {
     $site=mysql_real_escape_string($_REQUEST['site']);
     mysql_query("INSERT INTO blocksites (site) VALUES('$site');");
