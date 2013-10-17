@@ -637,9 +637,10 @@ function DoEditHost($Templ) {
           $needreload=1;
           break;
         case 'flags':
-           if (ereg('E',$val) != ereg('E',$h['flags'])) $needreload=1;
-           if (ereg('N',$val) != ereg('N',$h['flags'])) $needreload=1;
-           if (ereg('R',$val) != ereg('R',$h['flags'])) $needreload=1;
+           if (preg_match('/E/',$val) != preg_match('/E/',$h['flags'])) $needreload=1;
+           if (preg_match('/N/',$val) != preg_match('/N/',$h['flags'])) $needreload=1;
+           if (preg_match('/R/',$val) != preg_match('/R/',$h['flags'])) $needreload=1;
+           if (preg_match('/F/',$val) != preg_match('/F/',$h['flags'])) mysql_query("INSERT IGNORE INTO flags SET Name='BHOST'");
         default:
           $txt .= "'$val'";
       }
